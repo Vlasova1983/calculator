@@ -7,6 +7,15 @@
   --color-fon-button-inline2:orange;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,15 +29,6 @@ ul {
 a {
   outline: 0;
   text-decoration: none;
-}
-
-.calculator {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .calculator_conteiner {

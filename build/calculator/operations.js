@@ -1,16 +1,15 @@
 "use strict";
-let firstNumber = ''; // перший аргумент 
-let secondNumber = ''; // другий аргумент
-let sing = ''; // операція
+let firstNumber = '';
+let secondNumber = '';
+let sing = '';
 let finish = false;
-let key = ''; // ключ кнопки
-let memory = ''; // змінна для маніпуляцій з пам'ятью
+let key = '';
+let memory = '';
 const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
 const opirations = ['-', '+', '*', '/'];
-const screenResult = document.getElementById('screen'); // екран рузультату
-const clearAll = document.getElementById('ac'); // кнопка очищення екрану(даних)
-const btnAll = document.querySelectorAll('.btn'); //  масив всіх кнопок окрім очищення данних
-// функція очищення даних на екрані, спрацьовує на кнопку "ас"
+const screenResult = document.getElementById('screen');
+const clearAll = document.getElementById('ac');
+const btnAll = document.querySelectorAll('.btn');
 const onClickClaerAll = () => {
     firstNumber = '';
     secondNumber = '';
@@ -18,7 +17,6 @@ const onClickClaerAll = () => {
     finish = false;
     screenResult.textContent = '0';
 };
-// функція, яка обробляє події на всі кнопки по ключу
 const onClickBtn = (evt) => {
     key = evt.target.textContent;
     if (numbers.includes(key))
@@ -47,7 +45,6 @@ const onClickBtn = (evt) => {
     }
     ;
 };
-//  функція , яка спрацьовує на кнопку "="
 const createResult = () => {
     if (secondNumber === '=')
         secondNumber = firstNumber;
@@ -75,7 +72,6 @@ const createResult = () => {
     finish = true;
     screenResult.textContent = firstNumber;
 };
-//  функція , яка спрацьовує на кнопки з цифрами на крапкою, формує два аргумента , з якими далі роблять обчислення
 const createNumbers = (key) => {
     if (secondNumber === '' && sing === '') {
         if (key === '.' && firstNumber.includes('.'))
@@ -98,13 +94,11 @@ const createNumbers = (key) => {
     }
     return;
 };
-// функція вибору опирації над аргументами
 const createkOpration = (key) => {
     sing = key;
     screenResult.textContent = sing;
     return;
 };
-// функція , яка спрацьовує на кнопку "+/-"
 const singNumber = () => {
     if (sing === '') {
         firstNumber.includes('-') ? firstNumber = firstNumber.slice(1) : firstNumber = '-' + firstNumber;
@@ -115,19 +109,15 @@ const singNumber = () => {
         screenResult.textContent = secondNumber;
     }
 };
-// функція додавання в пям'ять
 const memoryPlus = () => {
     memory = String(Number(memory) + Number(screenResult.textContent));
 };
-// функція віднімання з пям'яті
 const memoryMinus = () => {
     memory = String(Number(memory) - Number(screenResult.textContent));
 };
-// функція очищення пам'яті
 const clearMemory = () => {
     memory = '0';
 };
-//  функція виводу значення пям'яті на екран
 const hendleShowMemory = () => {
     screenResult.textContent = memory;
 };
