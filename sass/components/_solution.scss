@@ -1,0 +1,14 @@
+.solution{
+    text-align: right;
+    width: 280px;  
+    font-size: 80px;
+    background-color: var(--color-fon); 
+    outline:none;
+    overflow: hidden;
+    @include _tablet {        
+        font-size: 100px;
+        width: 380px;  
+    }        
+}
+
+

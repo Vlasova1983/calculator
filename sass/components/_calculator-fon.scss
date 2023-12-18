@@ -1,0 +1,23 @@
+.calculator{
+    display:flex; 
+    justify-content: center;
+   
+}
+
+.calculator_conteiner{
+    height: 100vh;
+    width: 100vw;
+    display:flex; 
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-fon); 
+    color:var(--color-text-inline);   
+         
+     @include _desctop {
+        height:667px ;
+        width: 335px;
+        border-radius: 4px;
+        
+    }    
+}

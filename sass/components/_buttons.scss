@@ -1,0 +1,54 @@
+.btn_conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+    width: 335px;
+    gap: 15px;
+    margin: 20px;
+    @include _tablet {        
+        width: 400px;
+        gap: 25px;
+        margin: 20px;
+    }         
+    //  @include _desctop {
+    //    
+    // }    
+}
+
+.btn{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color:var(--color-fon-button-inline2);
+    color:var(--color-text-inline);
+    font-size: 20px;
+    height: 60px; 
+    width: 60px;     
+    border-radius: 50%;   
+
+    @include _tablet {        
+        font-size: 35px;
+        height: 80px; 
+        width: 80px;  
+    }
+}
+
+#interest,#ac,#sing-number,#MM,#MC,#MP,#MMin {
+    background-color:var(--color-fon-button-inline);
+    color: var(--color-text);     
+}
+
+#number{
+    background-color:var(--color-fon-button);
+}
+
+#number-0{
+    background-color:var(--color-fon-button);
+    color:var(--color-text-inline); 
+    width: 135px;
+    border-radius: 40px; 
+    @include _tablet {       
+        width: 190px;  
+    }
+}
