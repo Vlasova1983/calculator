@@ -1,0 +1,14 @@
+.functional_conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;  
+    @include _tablet {      
+        gap: 25px;      
+    }      
+}
+
+#functional{
+    background-color:var(--color-fon-button-inline);
+    color: var(--color-text);     
+}

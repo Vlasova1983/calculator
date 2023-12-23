@@ -1,0 +1,10 @@
+.operetions_conteiner{
+    display: flex;    
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;  
+    @include _tablet {      
+        gap: 25px;      
+    }      
+}
+

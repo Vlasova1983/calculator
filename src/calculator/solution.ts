@@ -1,1 +1,0 @@
-export const solutionBlock:string=`<p class="solution" id ="screen">0<p/>`// розмітка екрана результата рахувань

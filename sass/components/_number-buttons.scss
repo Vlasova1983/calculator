@@ -1,0 +1,27 @@
+.number_conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+    width: 220px;
+    gap: 15px;
+    
+    @include _tablet {        
+        width: 300px;
+        gap: 25px;
+        
+    }   
+}
+
+#number{
+    background-color:var(--color-fon-button);
+}
+
+#number-0{
+    background-color:var(--color-fon-button);
+    color:var(--color-text-inline); 
+    width: 135px;
+    border-radius: 40px; 
+    @include _tablet {       
+        width: 190px;  
+    }
+}
