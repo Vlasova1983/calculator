@@ -34,11 +34,12 @@ const data:{finish:boolean,firstNumber:string, secondNumber:string,sing:string}=
     secondNumber:'',// другий аргумент
     sing:''// значення операції над аргументами
 }
+let memory:string='';// змінна для роботи з пам'ятью  
 
 // функція, яка обробляє події на всі кнопки по ключу
 const onClickBtn=(item:any):void=>{     
     let key:string=item.textContent;;// ключ кнопки
-    let memory:string='';// змінна для роботи з пам'ятью    
+      
     if(numbersButtons.includes(key)) {
         createNumbers(key,data);
         if(data.secondNumber==='' && data.sing===''){

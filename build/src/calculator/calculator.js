@@ -28,10 +28,10 @@ const data = {
     secondNumber: '',
     sing: ''
 };
+let memory = '';
 const onClickBtn = (item) => {
     let key = item.textContent;
     ;
-    let memory = '';
     if (numbersButtons.includes(key)) {
         createNumbers(key, data);
         if (data.secondNumber === '' && data.sing === '') {
